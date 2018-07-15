@@ -1,0 +1,120 @@
+html, body {
+    background: $color-base;
+    color: $color-light;
+}
+
+body {
+    font-family: $sans;
+    font-size: 1.4rem;
+
+    @include breakpoint(tablet) {
+        font-size: 1.8rem;
+    }
+}
+
+a {
+    color: $color-link;
+    transition: all $transition-speed-1 ease;
+
+    .no-touchevents &:hover {
+        color: $color-link-hover
+    }
+}
+
+h1, h2, h3, h4, h5, h1 a, h2 a, h3 a, h4 a, h5 a {
+    font-family: $monospace;
+}
+
+p {
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+p, li {
+    font-weight: 300;
+    color: $color-copy;
+}
+
+.js-toggle > * {
+    pointer-events: none;
+}
+
+/*------------------------------------*\
+  Input field
+\*------------------------------------*/
+input {
+    padding: 12px;
+    line-height: 1;
+    font-size: 1.2rem;
+    display: inline-block;
+    height: 42px;
+
+/*    @include breakpoint(mdDesktop) {
+        height: 48px;
+        font-size: 1.6rem;
+    }*/
+}
+
+input[type="email"] {
+    background: $color-dark;
+    border: 1px solid $color-link;
+    color: $color-light;
+    font-family: $sans;
+
+    @include breakpoint(tablet) {
+        width: 210px;
+    }
+/*    @include breakpoint(mdDesktop) {
+        width: 300px;
+    }*/
+}
+
+input[type="submit"], .btn {
+    border: none;
+    background: $color-link;
+    color: $color-light;
+    text-transform: uppercase;
+    font-family: $monospace;
+    transition: all $transition-speed-1 ease;
+    .no-touchevents &:hover {
+        cursor: pointer;
+        background: $color-link-hover;
+    }
+}
+
+
+/*------------------------------------*\
+  Webkit scrollbar styles
+\*------------------------------------*/
+$scrollbarWidth: 10px;
+
+/*.no-touchevents {*/
+    ::-webkit-scrollbar {
+        width: $scrollbarWidth;
+        height: $scrollbarWidth;
+    }
+    ::-webkit-scrollbar-button {
+
+    }
+    ::-webkit-scrollbar-track {
+        background: $color-border;
+        height: $scrollbarWidth;
+    }
+    ::-webkit-scrollbar-track-piece {
+
+    }
+    ::-webkit-scrollbar-thumb {
+        background: $color-offlight;
+        &:hover {
+            background: $color-link;
+        }
+        &:active {
+            background: $color-link-hover;
+        }
+    }
+    ::-webkit-scrollbar-corner {
+        background-color: $color-offdark;
+    }
+    ::-webkit-resizer {
+    }
+/*}*/

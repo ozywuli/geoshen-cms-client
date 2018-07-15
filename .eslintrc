@@ -1,0 +1,21 @@
+{
+    "parser": "babel-eslint",
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "camelcase": 1,
+        "comma-style": 1,
+        "curly": "error",
+        "indent": 1,
+        "no-console": 1,
+        "valid-jsdoc": 2
+    },
+    "globals": {
+        "console": true,
+        "document": true,
+        "module": true,
+        "window": true
+    },
+    "extends": ["eslint:recommended", "plugin:react/recommended"]
+}
